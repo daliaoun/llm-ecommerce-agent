@@ -1,0 +1,12 @@
+src/: Contains the main application logic.
+features/: Contains separate files for each feature (product suggestion, FAQ, etc.).
+data/: Stores documents like the FAQ file or sample database schema for testing.
+app.py: Main entry point for the application.
+requirements.txt: To document the libraries you need.
+README.md: For project documentation.
+
+-------------------------------------------------------------------------------------------------
+ mysql -u root -p --socket=/var/lib/mysql/mysql.sock
+-------------------------------------------------------------------------------------------------
+
+

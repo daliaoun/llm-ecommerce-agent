@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environments
+.venv/
+env/
+.env
+.env.*
+!.env.example
+features/.env
+# Streamlit cache
+.streamlit/
+
+# Local databases and generated vector stores
+*.db
+data/database_v/

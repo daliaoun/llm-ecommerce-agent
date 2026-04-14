@@ -1,0 +1,244 @@
+{
+    "brands": [
+        {
+            "Field": "brand_id",
+            "Type": "int",
+            "Null": "NO",
+            "Key": "PRI"
+        },
+        {
+            "Field": "name",
+            "Type": "varchar(255)",
+            "Null": "NO",
+            "Key": "UNI"
+        },
+        {
+            "Field": "description",
+            "Type": "text",
+            "Null": "YES",
+            "Key": ""
+        }
+    ],
+    "categories": [
+        {
+            "Field": "category_id",
+            "Type": "int",
+            "Null": "NO",
+            "Key": "PRI"
+        },
+        {
+            "Field": "name",
+            "Type": "varchar(255)",
+            "Null": "NO",
+            "Key": "UNI"
+        },
+        {
+            "Field": "description",
+            "Type": "text",
+            "Null": "YES",
+            "Key": ""
+        }
+    ],
+    "order_items": [
+        {
+            "Field": "order_item_id",
+            "Type": "int",
+            "Null": "NO",
+            "Key": "PRI"
+        },
+        {
+            "Field": "order_id",
+            "Type": "int",
+            "Null": "YES",
+            "Key": "MUL"
+        },
+        {
+            "Field": "product_id",
+            "Type": "int",
+            "Null": "YES",
+            "Key": "MUL"
+        },
+        {
+            "Field": "quantity",
+            "Type": "int",
+            "Null": "NO",
+            "Key": ""
+        },
+        {
+            "Field": "price_at_time",
+            "Type": "decimal(10,2)",
+            "Null": "YES",
+            "Key": ""
+        }
+    ],
+    "orders": [
+        {
+            "Field": "order_id",
+            "Type": "int",
+            "Null": "NO",
+            "Key": "PRI"
+        },
+        {
+            "Field": "user_id",
+            "Type": "int",
+            "Null": "YES",
+            "Key": "MUL"
+        },
+        {
+            "Field": "order_date",
+            "Type": "timestamp",
+            "Null": "YES",
+            "Key": ""
+        },
+        {
+            "Field": "total_amount",
+            "Type": "decimal(10,2)",
+            "Null": "YES",
+            "Key": ""
+        },
+        {
+            "Field": "status",
+            "Type": "enum('Pending','Processing','Shipped','Delivered','Cancelled')",
+            "Null": "YES",
+            "Key": ""
+        }
+    ],
+    "products": [
+        {
+            "Field": "product_id",
+            "Type": "int",
+            "Null": "NO",
+            "Key": "PRI"
+        },
+        {
+            "Field": "name",
+            "Type": "varchar(255)",
+            "Null": "NO",
+            "Key": ""
+        },
+        {
+            "Field": "description",
+            "Type": "text",
+            "Null": "YES",
+            "Key": ""
+        },
+        {
+            "Field": "category_id",
+            "Type": "int",
+            "Null": "YES",
+            "Key": "MUL"
+        },
+        {
+            "Field": "brand_id",
+            "Type": "int",
+            "Null": "YES",
+            "Key": "MUL"
+        },
+        {
+            "Field": "price",
+            "Type": "decimal(10,2)",
+            "Null": "NO",
+            "Key": ""
+        },
+        {
+            "Field": "stock_quantity",
+            "Type": "int",
+            "Null": "NO",
+            "Key": ""
+        },
+        {
+            "Field": "specifications",
+            "Type": "json",
+            "Null": "YES",
+            "Key": ""
+        },
+        {
+            "Field": "rating",
+            "Type": "decimal(3,2)",
+            "Null": "YES",
+            "Key": ""
+        },
+        {
+            "Field": "num_reviews",
+            "Type": "int",
+            "Null": "YES",
+            "Key": ""
+        }
+    ],
+    "reviews": [
+        {
+            "Field": "review_id",
+            "Type": "int",
+            "Null": "NO",
+            "Key": "PRI"
+        },
+        {
+            "Field": "product_id",
+            "Type": "int",
+            "Null": "YES",
+            "Key": "MUL"
+        },
+        {
+            "Field": "user_name",
+            "Type": "varchar(255)",
+            "Null": "YES",
+            "Key": ""
+        },
+        {
+            "Field": "rating",
+            "Type": "int",
+            "Null": "YES",
+            "Key": ""
+        },
+        {
+            "Field": "review_text",
+            "Type": "text",
+            "Null": "YES",
+            "Key": ""
+        },
+        {
+            "Field": "review_date",
+            "Type": "date",
+            "Null": "YES",
+            "Key": ""
+        }
+    ],
+    "users": [
+        {
+            "Field": "user_id",
+            "Type": "int",
+            "Null": "NO",
+            "Key": "PRI"
+        },
+        {
+            "Field": "username",
+            "Type": "varchar(50)",
+            "Null": "NO",
+            "Key": "UNI"
+        },
+        {
+            "Field": "email",
+            "Type": "varchar(255)",
+            "Null": "NO",
+            "Key": "UNI"
+        },
+        {
+            "Field": "password",
+            "Type": "varchar(255)",
+            "Null": "NO",
+            "Key": ""
+        },
+        {
+            "Field": "full_name",
+            "Type": "varchar(255)",
+            "Null": "YES",
+            "Key": ""
+        },
+        {
+            "Field": "registration_date",
+            "Type": "timestamp",
+            "Null": "YES",
+            "Key": ""
+        }
+    ]
+}
